@@ -19,3 +19,11 @@ def grades(records):
     print(d)
 
 grades(records)
+
+
+for n in d:
+    #print(n, ": ")
+    aver = sum(d[n])/len(d[n])
+    print(f"{n}: {d[n]}, Average: {aver:.2f} ")
+    #print(f"{aver:.2f}")
+
