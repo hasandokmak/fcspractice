@@ -1,0 +1,5 @@
+Highest Average: Jana 97.0
+Most Consistent Student: Layla with lowest difference 5
+Student who have grades below 70: ['Ziad']
+Total Grades: 12
+Overall Average: 83.25

@@ -68,3 +68,11 @@ print(f"Student who have grades below 70: {belowSeventy}")
 print(f"Total Grades: {totalg}")
 classav = ttt/totalg
 print(f"Overall Average: {classav}")
+
+
+with open("classfile.txt", "w") as f:
+    f.write(f"Highest Average: {highestAVst} {highestAV}\n")
+    f.write(f"Most Consistent Student: {mcSTUDENT} with lowest difference {mindiff}\n")
+    f.write(f"Student who have grades below 70: {belowSeventy}\n")
+    f.write(f"Total Grades: {totalg}\n")
+    f.write(f"Overall Average: {classav}\n")
