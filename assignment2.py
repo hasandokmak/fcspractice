@@ -31,6 +31,8 @@ highestAVst = ""
 mindiff = float('inf')
 mcSTUDENT = ""
 
+belowSeventy = []
+
 for n in class_journal:
     #print(n, ": ")
     aver = sum(class_journal[n])/len(class_journal[n])
@@ -43,9 +45,14 @@ for n in class_journal:
         mindiff = diff
         mcSTUDENT = n
 
+    for gr in class_journal[n]:
+        if gr<70:
+            belowSeventy.append(n)
+            break
 
     print(f"{n}: {class_journal[n]}, Average: {aver:.2f} ")
     #print(f"{aver:.2f}")
 
 print(f"Highest Average: {highestAVst} {highestAV}")
 print(f"Most Consistent Student: {mcSTUDENT} with lowest difference {mindiff}")
+print(f"Student who have grades below 70: {belowSeventy}")
