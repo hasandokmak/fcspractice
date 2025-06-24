@@ -33,6 +33,11 @@ mcSTUDENT = ""
 
 belowSeventy = []
 
+totalg = 0
+
+ttt =0
+count =0
+
 for n in class_journal:
     #print(n, ": ")
     aver = sum(class_journal[n])/len(class_journal[n])
@@ -50,9 +55,16 @@ for n in class_journal:
             belowSeventy.append(n)
             break
 
+    for gr in class_journal[n]:
+        totalg+=1
+        ttt += gr
+
     print(f"{n}: {class_journal[n]}, Average: {aver:.2f} ")
     #print(f"{aver:.2f}")
 
 print(f"Highest Average: {highestAVst} {highestAV}")
 print(f"Most Consistent Student: {mcSTUDENT} with lowest difference {mindiff}")
 print(f"Student who have grades below 70: {belowSeventy}")
+print(f"Total Grades: {totalg}")
+classav = ttt/totalg
+print(f"Overall Average: {classav}")
