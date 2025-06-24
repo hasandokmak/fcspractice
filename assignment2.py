@@ -6,24 +6,33 @@ records = [
 ]
 
 # print(records[1][0])
-d = {}
+class_journal = {}
 def grades(records):
     for i in range(len(records)):
         name = records[i][0]
         grade = records[i][1]
-        if name in d:
-            d[name].append(grade)
+        if name in class_journal:
+            class_journal[name].append(grade)
         else:
-            d[name]= [grade]
+            class_journal[name]= [grade]
 
-    print(d)
+    print(class_journal)
 
 grades(records)
 
+# i didnt realize that we dont have to use a function
+#  in the first part until it was noted in the second
 
-for n in d:
+
+highestAV = 0
+
+
+for n in class_journal:
     #print(n, ": ")
-    aver = sum(d[n])/len(d[n])
-    print(f"{n}: {d[n]}, Average: {aver:.2f} ")
+    aver = sum(class_journal[n])/len(class_journal[n])
+    if aver > highestAV:
+        highestAV = aver
+    print(f"{n}: {class_journal[n]}, Average: {aver:.2f} ")
     #print(f"{aver:.2f}")
 
+print(f"Highest Average: {highestAV}")
