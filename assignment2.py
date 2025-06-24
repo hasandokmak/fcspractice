@@ -25,6 +25,9 @@ grades(records)
 
 
 highestAV = 0
+highestAVst = ""
+# highestGR 
+# LowestGR 
 
 
 for n in class_journal:
@@ -32,7 +35,9 @@ for n in class_journal:
     aver = sum(class_journal[n])/len(class_journal[n])
     if aver > highestAV:
         highestAV = aver
+        highestAVst = n
+
     print(f"{n}: {class_journal[n]}, Average: {aver:.2f} ")
     #print(f"{aver:.2f}")
 
-print(f"Highest Average: {highestAV}")
+print(f"Highest Average: {highestAVst} {highestAV}")
