@@ -24,6 +24,14 @@ grades(records)
 #  in the first part until it was noted in the second
 
 
+
+new_grades = [["Jana", 99], ["Ziad", 78], ["Layla", 84]]
+
+for name, grade in new_grades:
+    if name in class_journal:
+        class_journal[name].append(grade)
+    else:
+        class_journal[name] = [grade]
 highestAV = 0
 highestAVst = ""
 # highestGR 
@@ -68,6 +76,8 @@ print(f"Student who have grades below 70: {belowSeventy}")
 print(f"Total Grades: {totalg}")
 classav = ttt/totalg
 print(f"Overall Average: {classav}")
+
+
 
 
 with open("classfile.txt", "w") as f:
