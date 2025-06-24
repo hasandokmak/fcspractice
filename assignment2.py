@@ -28,7 +28,8 @@ highestAV = 0
 highestAVst = ""
 # highestGR 
 # LowestGR 
-
+mindiff = float('inf')
+mcSTUDENT = ""
 
 for n in class_journal:
     #print(n, ": ")
@@ -37,7 +38,14 @@ for n in class_journal:
         highestAV = aver
         highestAVst = n
 
+    diff = max(class_journal[n]) - min(class_journal[n])
+    if diff < mindiff:
+        mindiff = diff
+        mcSTUDENT = n
+
+
     print(f"{n}: {class_journal[n]}, Average: {aver:.2f} ")
     #print(f"{aver:.2f}")
 
 print(f"Highest Average: {highestAVst} {highestAV}")
+print(f"Most Consistent Student: {mcSTUDENT} with lowest difference {mindiff}")
